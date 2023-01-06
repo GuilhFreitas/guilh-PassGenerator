@@ -88,9 +88,27 @@ var upperCasedCharacters = [
   'Z'
 ];
 
+let passLength = "";
+let lowerAllow = true;
+let upperAllow = true;
+let numAllow = true;
+let speAllow = true;
+
 // Function to prompt user for password options
 function getPasswordOptions() {
-
+  passLength = prompt("Please enter the length of your password from 10 to 64 characters:");
+  while (passLength < 10 || passLength > 64 || isNaN(passLength)){
+    passLength = prompt("Your password cannot be that length. Please enter the length of your password from 10 to 64 characters:");
+  }
+  lowerAllow = confirm("Would you like your password to contain lowercase characters?");
+  upperAllow = confirm("Would you like your password to contain uppercase characters?");
+  numAllow = confirm("Would you like your password to contain numbers?");
+  speAllow = confirm("Would you like your password to contain special characters?");
+  // console.log(`passLength: ${passLength}
+  // lowerAllow: ${lowerAllow}
+  // upperAllow: ${upperAllow}
+  // numAllow: ${numAllow}
+  // speAllow: ${speAllow}`);
 }
 
 // Function for getting a random element from an array
@@ -100,7 +118,7 @@ function getRandom(arr) {
 
 // Function to generate password with user input
 function generatePassword() {
-
+  getPasswordOptions()
 }
 
 // Get references to the #generate element
