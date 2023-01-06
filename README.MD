@@ -13,13 +13,29 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+<br />
+
+This is a password generator application.
 
 ![Screenshot of password generator](images/screenshot1.png)
-![Screenshot of password generator with length prompt](images/screenshot2.png)
-![Screenshot of password generator with character prompt](images/screenshot3.png)
-![Screenshot of password generator with generated password](images/screenshot4.png)
+<br /><br />
 
-This is a password generator application. It runs in browser and generates a password that is between 10 and 64 characters long, giving the option of including or excluding all lowercase, uppercase, numeric and special characters from the generator.
+
+It runs in browser and generates a password that is between 10 and 64 characters long.
+
+![Screenshot of password generator with length prompt](images/screenshot2.png)
+<br /><br />
+
+
+It gives the option of including or excluding all lowercase, uppercase, numeric and special characters from the generator.
+
+![Screenshot of password generator with character prompt](images/screenshot3.png)
+<br />
+<br />
+
+The generated password is displayed in the textbox.
+
+![Screenshot of password generator with generated password](images/screenshot4.png)
 
 ## Installation
 
@@ -38,4 +54,3 @@ Simply click the "Generate Password" button to begin the process. Answer the all
 ## Acknowledgments
 
 * [Best README Template](https://github.com/othneildrew/Best-README-Template/pull/73)
-* 
