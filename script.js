@@ -118,8 +118,8 @@ function getPasswordOptions() {
   }
 }
 
-// Function for getting a random element from an array
-function getRandom() {
+// Function for generating a random string with selected characters
+function getRandomPass() {
   for (i = 0; i < passLength; i++){
     let randomIndex = Math.floor(Math.random()*allowedCharacters.length);
     randomPass += allowedCharacters[randomIndex];
@@ -133,7 +133,7 @@ function generatePassword() {
   getPasswordOptions();
   // initialize randomPass
   randomPass = "";
-  getRandom();
+  getRandomPass();
   return randomPass;
 }
 
