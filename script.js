@@ -94,9 +94,9 @@ let randomPass = "";
 
 // Function to prompt user for password options
 function getPasswordOptions() {
-  passLength = prompt("Please enter the length of your password from 10 to 64 characters:");
+  passLength = prompt("Please enter the length of your password as a number from 10 to 64 characters:", "15");
   while (passLength < 10 || passLength > 64 || isNaN(passLength)){
-    passLength = prompt("Your password cannot be that length. Please enter the length of your password from 10 to 64 characters:");
+    passLength = prompt("Your password cannot be that length. Please enter the length of your password as a number from 10 to 64 characters:");
   }
   if(confirm("Would you like your password to contain lowercase characters?")){
     allowedCharacters = allowedCharacters.concat(lowerCasedCharacters);
