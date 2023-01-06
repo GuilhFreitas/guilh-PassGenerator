@@ -99,17 +99,22 @@ function getPasswordOptions() {
   while (passLength < 10 || passLength > 64 || isNaN(passLength)){
     passLength = prompt("Your password cannot be that length. Please enter the length of your password as a number from 10 to 64 characters:");
   }
-  if(confirm("Would you like your password to contain lowercase characters?")){
-    allowedCharacters = allowedCharacters.concat(lowerCasedCharacters);
-  }
-  if(confirm("Would you like your password to contain uppercase characters?")){
-    allowedCharacters = allowedCharacters.concat(upperCasedCharacters);
-  }
-  if(confirm("Would you like your password to contain numbers?")){
-    allowedCharacters = allowedCharacters.concat(numericCharacters);
-  }
-  if(confirm("Would you like your password to contain special characters?")){
-    allowedCharacters = allowedCharacters.concat(specialCharacters);
+  while (allowedCharacters.length === 0){
+    if(confirm("Would you like your password to contain lowercase characters?")){
+      allowedCharacters = allowedCharacters.concat(lowerCasedCharacters);
+    }
+    if(confirm("Would you like your password to contain uppercase characters?")){
+      allowedCharacters = allowedCharacters.concat(upperCasedCharacters);
+    }
+    if(confirm("Would you like your password to contain numbers?")){
+      allowedCharacters = allowedCharacters.concat(numericCharacters);
+    }
+    if(confirm("Would you like your password to contain special characters?")){
+      allowedCharacters = allowedCharacters.concat(specialCharacters);
+    }
+    if(allowedCharacters.length === 0){
+      alert("You did not selected any character type. You must select at least one.")
+    }
   }
 }
 
